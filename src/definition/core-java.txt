@@ -1,7 +1,7 @@
 ***ANSWER ALL QUESTIONS BELOW***
 
 What is a programming language?
-Answer:
+Answer: hfjagrj
 
 What is a JDK composed of? Define each components?
 Answer:
