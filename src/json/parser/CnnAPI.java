@@ -51,6 +51,8 @@ public class CnnAPI {
 
         JSONObject rootObject = new JSONObject(new String(Files.readAllBytes(new File("src/json/parser/data.json").toPath())));
 
+        https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=%s
+
         // Continue implementing here..
     }
 

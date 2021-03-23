@@ -10,7 +10,11 @@ public class UseMap {
          *
          * Store and retrieve data from/to a database table.
          */
-
+        for(Entry ent:map.entrySet()) {
+            for(Object obj: Arrays.asList(ent.getValue())) {
+                System.out.println(obj.toString());
+            }
+        }
     }
 
 }

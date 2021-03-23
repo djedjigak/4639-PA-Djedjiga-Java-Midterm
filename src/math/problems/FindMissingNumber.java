@@ -1,6 +1,11 @@
 package math.problems;
 
-public class FindMissingNumber {
+public abstract class FindMissingNumber<total> {
+
+    protected FindMissingNumber(FindMissingNumber primeNumber) {
+
+
+    }
 
     public static void main(String[] args) {
         /*
@@ -9,7 +14,16 @@ public class FindMissingNumber {
 
          Write a method to find the missing number from the array.
          */
-        int[] array = new int[] {10, 2, 1, 4, 5, 3, 7, 8, 6};
-
     }
+
+    int[] array = new int[]{10, 2, 1, 4, 5, 3, 7, 8, 6};
+
+
 }
+
+
+
+
+
+
+
