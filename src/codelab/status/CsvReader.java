@@ -31,8 +31,8 @@ public class CsvReader {
                     continue;
                 }
                 String[] name = line.split(csvSplitBy);
-                roster.add(new Trainee(name[5].replace("\"", ""), name[4].replace("\"",
-                        ""), Integer.parseInt(name[10])));
+                roster.add(new Trainee(name[0].replace("\"", ""), name[0].replace("\"",
+                        ""), Integer.parseInt(name[0])));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -60,6 +60,17 @@ public class CsvReader {
                 System.out.print("You are in bad shape !-->                           ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             }
+
+
         }
+
+        int size = roster.size();
+        int total = 0;
+        for (Trainee tr : roster) {
+            total += tr.getNumberOfExercisesSolved();
+        }
+
+        System.out.println("\nThe average score of the class: " + total / size);
     }
+
 }
