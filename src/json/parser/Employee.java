@@ -1,5 +1,7 @@
 package json.parser;
 
+
+
 public class Employee {
 
     private String empEmail;

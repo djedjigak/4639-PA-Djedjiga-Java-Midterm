@@ -8,40 +8,34 @@ public class Palindrome {
         /*
           If a String is reversed and it remains unchanged, that is called a palindrome.
             Example: MOM, DAD, MADAM are palindromes.
-
             Write a method to check if a given String is a palindrome or not.
          */
 
-        Scanner string = new Scanner(System.in);
+        //question for entry
+        System.out.print("Enter word of choice: ");
 
-        System.out.println("Enter a string to check if it's a palindrome");
-        String inputString = getInputString();
+        //imported scanner
+        Scanner in = new Scanner(System.in); //<- enter into the scanner system
 
-        int length  = inputString.length();
-        int i, Mom, Dad, Madam;
+        //Original string
+        String origString = in.nextLine(); //<- It will check our input and covert it to a string
+        int length = origString.length(); // <- will look at the length of the string
 
-        Mom  = 0;
-          Madam= length - 1;
-        Dad = (Mom + Madam)/2;
+        boolean isPalindrome = true; //declare and assign boolean
 
-        for (i = Mom; i <= Dad; i++) {
-            if (inputString.charAt(Mom) == inputString.charAt(Madam)) {
-                Mom++;
-                Madam--;
-            }
-            else
+        for(int beginIndex = 0; beginIndex < length; beginIndex++) //
+        {
+            if(origString.charAt(beginIndex) != origString.charAt(length-1-beginIndex)) {
+                System.out.println("Word entered is not a Palindrome.");
+                isPalindrome = false;
                 break;
+            }
         }
-        if (i == Dad + 1)
-            System.out.println("Palindrome");
-        else
-            System.out.println("Not a palindrome");
-    }
 
-    private static String getInputString() {
-        String getInputString = getInputString();
-        return getInputString();
-    }
-}
-    
+        if(isPalindrome) {
+            System.out.println("Word you entered is a Palindrome.");
+        }
+    }}
+
+
 

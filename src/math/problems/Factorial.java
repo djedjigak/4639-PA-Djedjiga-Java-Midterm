@@ -1,27 +1,30 @@
+
 package math.problems;
+
+import java.util.Scanner;
 
 public class Factorial {
 
     /*
      Write a method to return the Factorial of any given number using Recursion as well as Iteration
-
      Factorial of 5! = 5 x 4 X 3 X 2 X 1 = 120
      */
 
     public static void main(String[] args) {
-        int factorial = fact(5);
-        System.out.println("Factorial of 5 is: "+factorial);
+        int n,mul;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter any integer: ");
+        n = s.nextInt();
+        Factorial obj = new Factorial();
+        mul = obj.factorial(n);
+        System.out.println("Factorial of "+n+" :"+mul);
     }
-    static int fact(int n)
+    static int factorial(int x)
     {
-        int output;
-        if(n==1){
-            return 1;
+        if(x > 1)
+        {
+            return(x * factorial(x - 1));
         }
-        //Recursion: Function calling itself!!
-        output = fact(n-1)* n;
-        return output;
+        return 1;
     }
-
-    }
-
+}

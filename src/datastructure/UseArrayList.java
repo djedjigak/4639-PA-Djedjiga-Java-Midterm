@@ -1,6 +1,7 @@
-package datastructure;
 
-import java.lang.reflect.Array;
+
+
+package datastructure;
 
 public class UseArrayList {
 
@@ -12,9 +13,9 @@ public class UseArrayList {
          * Store and retrieve data from/to a database table.
          */
 
+    }
 
-
-
+}
 
 
 
